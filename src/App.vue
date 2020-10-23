@@ -28,11 +28,9 @@ export default {
 body {
   background-color: #000;
   letter-spacing: 2px;
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 2rem; */
   font-size: 75%;
 }
 

@@ -6,12 +6,12 @@
 
       <div class="flex justify-between">
         <small class="text-blue text-xl">{{previous}}</small>
-        <small class="text-blue ">{{sign}}</small>
+        <small class="text-blue text-xl">{{sign}}</small>
       </div>
 
     </div>
 
-    <div class="flex-70 p-5 grid grid-cols-50 grid-rows-60 gap-3 justify-center items-center">
+    <div class="flex-70 p-5 grid grid-cols-50 grid-rows-60 gap-4 justify-center items-center">
       <button v-bind:class="[btnClass]"  @click="clear">C</button>
       <button v-bind:class="[btnClass]" @click="negate">+/-</button>
       <button v-bind:class="[btnClass]" @click="del">DEL</button>
@@ -33,53 +33,7 @@
       <button  @click="calc"  v-bind:class="[btnSign]" >=</button>
     </div>
   </div>
-
-
-
-
-
-<!-- <div class="calculator">
-    <div class="screen">
-
-      <div class="main-screen">{{current}}</div>
-
-      <div class="bottom-screen">
-        <small>{{previous}}</small>
-        <small>{{sign}}</small>
-      </div>
-
-    </div>
-
-    <div class="buttons">
-      <button @click="clear">C</button>
-      <button @click="negate">+/-</button>
-      <button @click="del">DEL</button>
-      <button @click="pressedSign('/')" class="sign">/</button>
-      <button @click="pressed('7')">7</button>
-      <button @click="pressed('8')">8</button>
-      <button @click="pressed('9')">9</button>
-      <button @click="pressedSign('*')" class="sign">*</button>
-      <button @click="pressed('4')">4</button>
-      <button @click="pressed('5')">5</button>
-      <button @click="pressed('6')">6</button>
-      <button @click="pressedSign('-')" class="sign">-</button>
-      <button @click="pressed('1')">1</button>
-      <button @click="pressed('2')">2</button>
-      <button @click="pressed('3')">3</button>
-      <button @click="pressedSign('+')" class="sign">+</button>
-      <button @click="pressed('0')" class="span-2">0</button>
-      <button @click="pressed('.')">.</button>
-      <button @click="calc" class="sign">=</button>
-
-    </div>
-  </div> -->
-
-
-
-
 </template>
-
-
 
 <script>
 
@@ -89,9 +43,9 @@ export default {
     const current = '0'
     const sign = null
     const previous = '0'
-    const btnClass = ["h-full", "w-full", "rounded-full", "bg-darkk", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
-    const zero = ["h-full", "w-full", "rounded-full", "bg-darkk", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center", "col-span-2"]
-    const btnSign = ["h-full", "w-full", "rounded-full", "bg-darkk", "text-blue", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
+    const btnClass = ["h-full", "w-full", "rounded-full", "bg-darkk", "text-xl", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
+    const zero = ["h-full", "w-full", "rounded-full", "text-xl", "bg-darkk", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center", "col-span-2"]
+    const btnSign = ["h-full", "w-full", "rounded-full", "text-xl", "bg-darkk", "text-blue", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
 
     return { current, sign, previous, btnClass, zero, btnSign };
   },
@@ -104,8 +58,6 @@ export default {
       this.previous = '0'
       this.sign = null
     },
-
-
 
     negate() {
 
@@ -126,7 +78,6 @@ export default {
       }
 
       this.current = `${this.current * -1}` 
-
     },
 
 
@@ -140,10 +91,6 @@ export default {
     },
 
     pressed(val){
-
-      
-
-
       if(this.current === `0`) {
         this.current = ``
       }
@@ -203,17 +150,9 @@ export default {
   }
 }
 
-
 </script>
 
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  button{
-    
-  }
-
-</style>
+<style scoped></style>
 
 
 
