@@ -2,10 +2,10 @@
   <div class="bg-dark w-35 h-9.5v flex flex-col rounded-md overflow-hidden">
     <div class="flex-30 p-5 bg-darkk rounded-b-3xl flex flex-col">
 
-      <div class="flex-1 text-white text-right text-lg overflow-x-auto">{{current}}</div>
+      <div class="flex-1 text-white text-right text-3xl overflow-x-auto">{{current}}</div>
 
       <div class="flex justify-between">
-        <small class="text-blue ">{{previous}}</small>
+        <small class="text-blue text-xl">{{previous}}</small>
         <small class="text-blue ">{{sign}}</small>
       </div>
 
