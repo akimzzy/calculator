@@ -43,9 +43,9 @@ export default {
     const current = '0'
     const sign = null
     const previous = '0'
-    const btnClass = ["h-full", "w-full", "rounded-full", "hover:bg-darkkk", "bg-darkk", "text-xl", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
-    const zero = ["h-full", "w-full", "rounded-full", "text-xl", "bg-darkk", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center", "col-span-2"]
-    const btnSign = ["h-full", "w-full", "rounded-full", "text-xl", "bg-darkk", "text-blue", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
+    const btnClass = ["h-full", "w-full", "focus:outline-none", "rounded-full", "hover:bg-darkkk", "bg-darkk", "text-xl", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
+    const zero = ["h-full", "focus:outline-none", "w-full", "rounded-full", "text-xl", "bg-darkk", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center", "col-span-2"]
+    const btnSign = ["h-full", "focus:outline-none", "w-full", "rounded-full", "text-xl", "bg-darkk", "text-blue", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
 
     return { current, sign, previous, btnClass, zero, btnSign };
   },
