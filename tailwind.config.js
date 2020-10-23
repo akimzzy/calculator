@@ -12,7 +12,7 @@ module.exports = {
         "10v": "100vh",
       },
       width: {
-        "35": "15rem",
+        "35": "20rem",
       },
       gridTemplateColumns: {
         "50": "repeat(4, 1fr)",
