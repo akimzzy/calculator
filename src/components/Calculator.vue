@@ -127,7 +127,9 @@ export default {
 
       this.previous = this.current
       this.current = '0'
-      this.sign = val
+      if(this.previous !== '0') {
+        this.sign = val
+      }
     },
 
     calc(){
