@@ -46,7 +46,7 @@ export default {
     const num = ["1","2","3","4","5","6","7","8","9","0","."]
     const previous = '0'
     const btnClass = ["h-full", "w-full", "focus:outline-none", "rounded-full", "hover:bg-darkkk", "bg-darkk", "text-xl", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
-    const zero = ["h-full", "focus:outline-none", "w-full", "rounded-full", "hover:bg-darkkk", "text-xl", "bg-darkk", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center", "col-span-2"]
+    const zero = [...btnClass, "col-span-2"]
     const btnSign = ["h-full", "focus:outline-none", "w-full", "rounded-full", "hover:bg-darkkk", "text-xl", "bg-darkk", "text-blue", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
 
     return { current, sign, previous, btnClass, zero, btnSign, num, signs };
