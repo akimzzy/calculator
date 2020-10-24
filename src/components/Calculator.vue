@@ -42,12 +42,26 @@ export default {
   data() {
     const current = '0'
     const sign = null
+    const signs = ["+","-","*","/"]
+    const num = ["1","2","3","4","5","6","7","8","9","0","."]
     const previous = '0'
     const btnClass = ["h-full", "w-full", "focus:outline-none", "rounded-full", "hover:bg-darkkk", "bg-darkk", "text-xl", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
-    const zero = ["h-full", "focus:outline-none", "w-full", "rounded-full", "text-xl", "bg-darkk", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center", "col-span-2"]
-    const btnSign = ["h-full", "focus:outline-none", "w-full", "rounded-full", "text-xl", "bg-darkk", "text-blue", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
+    const zero = ["h-full", "focus:outline-none", "w-full", "rounded-full", "hover:bg-darkkk", "text-xl", "bg-darkk", "text-lightt", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center", "col-span-2"]
+    const btnSign = ["h-full", "focus:outline-none", "w-full", "rounded-full", "hover:bg-darkkk", "text-xl", "bg-darkk", "text-blue", "text-xs", "border-none", "cursor-pointer", "flex", "justify-center", "items-center"]
 
-    return { current, sign, previous, btnClass, zero, btnSign };
+    return { current, sign, previous, btnClass, zero, btnSign, num, signs };
+  },
+
+  mounted: function() {
+      window.addEventListener('keydown', (e) => {
+        this.num.includes(e.key) && this.pressed(e.key)
+        this.signs.includes(e.key) && this.pressedSign(e.key)
+        e.key === "=" && this.calc()
+        e.key === "Backspace" && this.del()
+        e.key === "Delete" && this.del()
+        e.key === "Enter" && this.calc()
+        e.key === "Escape" && this.clear()  
+      })
   },
 
   methods: {
